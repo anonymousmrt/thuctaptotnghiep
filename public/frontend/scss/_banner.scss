@@ -1,0 +1,159 @@
+.sbanner {
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    
+    .product-banner-img {
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background-color: #000;
+            opacity: 0.5;
+        }
+
+        + * {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .banner-logo {
+        width: 128px;
+        height: 128px;
+        fill: #fff;
+    }
+
+    h1,
+    p {
+        color: inherit;
+    }
+
+    h1 {
+        line-height: 1.4;
+    }
+
+    .banner-scroll {
+        display: block;
+        width: 100px;
+        height: 50px;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -50px;
+        text-align: center;
+        color: $strong_color;
+        z-index: 9;
+
+        &:hover,
+        &:focus {
+            color: $accent_color;
+            .icon {
+                animation: bannerScroll 1s infinite ease-out;
+            }
+        }
+        
+        &:before {
+            content: '';
+            display: block;
+            border: 50px solid transparent;
+            border-bottom-color: #fff;
+            position: absolute;
+            top: -50px;
+            left: 0;
+        }
+        .icon {
+            position: absolute;
+            z-index: 1;
+            width: 32px;
+            height: 32px;
+            left: 50%;
+            margin-left: -17px;
+            top: 100%;
+            margin-top: -32px;
+        }
+    }
+}
+
+.sbanner-home {
+    background-color: $accent_color;
+}
+
+#sbanner-particles {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.sbanner-block {
+    display: table;
+    width: 100%;
+}
+
+.sbanner-content {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    height: 100vh;
+
+    .intractable {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media( max-width: 767px ) {
+    .sbanner {
+        .banner-logo {
+            width: 64px;
+            height: 64px;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        .sbanner-desc {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media( min-width: 768px ) and ( max-width: 1019px ) {
+    .sbanner {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media( min-width: 1019px ) {
+    .sbanner {
+        .sbanner-desc {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@keyframes bannerScroll {
+    0% {
+        opacity: 0;
+        margin-top: -50px;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        margin-top: -32px;
+    }
+}

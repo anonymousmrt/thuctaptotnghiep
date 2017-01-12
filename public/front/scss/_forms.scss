@@ -1,0 +1,54 @@
+// The basic
+//--------------------------------------------------
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select {
+    max-width: 100%;
+    font-family: $font_alt;
+    font-size: 14px;
+}
+
+// Search form
+//--------------------------------------------------
+
+.search-form {
+    position: relative;
+
+    label {
+        display: block;
+    }
+}
+
+.search-field {
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+    padding: 8px 36px 8px 16px;
+    border: none;
+    appearance: none;
+}
+
+.search-submit {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY( -50% );
+    transition: color 240ms, background-color 240ms;
+}

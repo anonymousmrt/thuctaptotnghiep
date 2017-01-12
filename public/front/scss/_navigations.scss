@@ -1,0 +1,285 @@
+// Main menu
+//--------------------------------------------------
+ul.top-menu {
+    font-family: $font_alt;
+    font-size: 87.5%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        position: relative;
+    }
+    > li {
+        > a {
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    }
+
+    @media( min-width: 1020px ) {
+        height: 100%;
+        margin-left: -16px;
+        margin-right: -16px;
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            position: relative;
+        }
+        ul.sub-menu {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            &.oposite {
+                left: auto;
+                right: 100%;
+            }
+        }
+
+        li {
+            overflow: hidden;
+            &:hover {
+                overflow: visible;
+            }
+        }
+
+        > li {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 16px;
+            padding-right: 16px;
+
+            .icon-carrot-down {
+                margin-left: 4px;
+            }
+            > ul.sub-menu {
+                top: 100%;
+                left: 0;
+                &.oposite {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+// Social menu and nav tools
+//--------------------------------------------------
+
+ul.social-menu,
+ul.navtool-menu {
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    font-size: 0;
+
+    &:after {
+        content: '';
+        font-size: 0;
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        font-size: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    a,
+    button {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        height: 2em;
+        transition: color 240ms, background-color 240ms;
+    }
+}
+
+ul.navtool-menu {
+    button {
+        transition: color 240ms, background-color 240ms;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        width: 1em;
+
+        .icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate( -50%, -50% );
+            transition: visibility 240ms ease-in, opacity 240ms ease-in;
+        }
+        .icon-cancel {
+            visibility: hidden;
+            opacity: 0;
+        }
+        &.active {
+            .icon:not(.icon-cancel) {
+                visibility: hidden;
+                opacity: 0;
+            }
+            .icon-cancel {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media( min-width: 1020px ) {
+    .header-main-area {
+        ul.alt-style-icons-menu {
+            margin-left: -5px;
+            margin-right: -5px;
+            li {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            a,
+            button {
+                width: 50px;
+                height: 50px;
+                border-radius: 50px;
+                line-height: 49px;
+                text-align: center;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    position: absolute;
+                    left: 50%;
+                    top: -1000px;
+                    bottom: 72px;
+                    border-left: 1px solid;
+                    transition: bottom 240ms, border-color 240ms;
+                }
+
+                &:hover,
+                &:focus,
+                &.active {
+                    &:before {
+                        bottom: 62px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Main navigation and main header area default
+//--------------------------------------------------
+
+.header-nav-area {
+    .main-navigation,
+    .sheet,
+    .top-menu-container,
+    .main-nav-inner,
+    .social-menu-container,
+    .navtool-menu-container {
+        height: 100%;
+    }
+}
+
+.main-navigation {
+    .social-menu-container,
+    .navtool-menu-container,
+    .top-menu-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .main-nav-inner {
+        position: relative;
+    }
+}
+
+.main-nav-layout-default {
+    height: 100%;
+}
+
+@media( min-width: 1020px ) {
+    .main-nav-layout-default {
+        .top-menu-container {
+            text-align: center;
+        }
+
+        .navtool-menu-container.navtool-left {
+            float: left;
+        }
+        
+        .navtool-menu-container.navtool-right {
+            float: right;
+        }
+    }
+    .main-navigation.layout-2 {
+        .top-menu-container {
+            float: left;
+        }
+    }
+}
+
+
+// Main Navigation Default style
+//--------------------------------------------------
+
+
+// Main navigation style 1
+//--------------------------------------------------
+
+.main-nav-layout-1 {
+    @media( min-width: 1020px ) {
+        text-align: center;
+        .navtool-menu-container-left {
+            float: left;
+        }
+        .navtool-menu-container-right {
+            float: right;
+        }
+    }
+}
+
+
+// Main navigation style 2
+//--------------------------------------------------
+
+.main-nav-layout-2 {
+    @media( min-width: 1020px ) {
+        .navtool-menu-container,
+        .social-menu-container {
+            float: right;
+        }
+    }
+}
+
+
+// Navigation extras
+//--------------------------------------------------
+.nav-pattern {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+    &.top {
+        top: 0;
+    }
+    &.bot {
+        bottom: 0;
+    }
+}

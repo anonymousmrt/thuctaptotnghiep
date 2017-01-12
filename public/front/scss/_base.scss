@@ -1,0 +1,430 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $font_main;
+    line-height: 1.875;
+    background-color: #fff;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    // font-family: $font_code;
+}
+
+pre {
+    border: 1px solid;
+    line-height: 1.25;
+    max-width: 100%;
+    padding: 20px;
+    margin: 0 0 1.875rem;
+}
+
+abbr,
+acronym {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+mark,
+ins {
+    text-decoration: none;
+}
+
+big {
+    font-size: 1.25em;
+}
+
+small {
+    font-size: 0.75em;
+}
+
+p,
+address {
+    margin: 0 0 1.875rem;
+}
+
+figure {
+    margin: 0 0 1.875rem;
+}
+
+.font-main {
+    font-family: $font_main;
+}
+
+.font-alt {
+    font-family: $font_alt;
+}
+
+
+// HEADINGS
+//--------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 1.875rem;
+}
+
+h1 {
+    font-size: 2.75rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: 1.125rem;
+    line-height: 1.3;
+}
+
+h5 {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+h6 {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+// BLOCKQUOTE
+//--------------------------------------------------
+
+blockquote {
+    font-size: 1.125rem;
+    line-height: 1.55;
+    font-style: italic;
+    display: block;
+    margin: 0 0 1.875rem;
+    padding: 2rem;
+    border-left: 2px solid;
+
+    q {
+        quotes: "" "";
+
+        &:before,
+        &:after {
+            content: "";
+        }
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    cite {
+        display: block;
+        margin-top: 18px;
+        &:before {
+            content: '–\A0';
+        }
+    }
+}
+
+
+// LINKS
+//--------------------------------------------------
+
+a {
+    text-decoration: none;
+    transition: color 300ms, opacity 300ms;
+    &:hover {
+    }
+}
+
+a.a-back-top {
+    width: 48px;
+    height: 48px;
+    line-height: 46px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 21px;
+    box-shadow: 0px 0px 0px 1px rgba( 255, 255, 255, 0.25 );
+    border: 1px solid rgba( 0, 0, 0, 0.1 );
+    background-color: #FFF;
+    position: fixed;
+    bottom: 20px;
+    right: -48px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 240ms;
+    z-index: 98;
+
+    &.active {
+        right: 20px;
+        visibility: visible;
+        opacity: 1;
+    }
+    &:hover,
+    &:focus {
+        color: #FFF;
+    }
+}
+
+
+// LISTS
+//--------------------------------------------------
+
+ul,
+ol {
+    margin: 0 0 28px;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li > ul,
+li > ol {
+    margin-bottom: 0;
+}
+
+.ul-none,
+.ul-inline,
+.ol-none,
+.ol-inline {
+    list-style: none;
+}
+
+.ul-inline,
+.ol-inline {
+    > li {
+        display: inline-block;
+    }
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 0 20px 28px;
+}
+
+
+// MEDIA
+//--------------------------------------------------
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+
+// TABLES
+//--------------------------------------------------
+
+.table-responsive {
+    overflow: auto;
+    table {
+        min-width: 600px;
+    }
+}
+table {
+    margin: 0 0 28px;
+    border-bottom: 1px solid;
+    border-collapse: collapse;
+    border-spacing: 0;
+    line-height: 1.4;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px 10px 8px 0;
+}
+
+th {
+    font-weight: bold;
+}
+
+td {
+    border-top: 1px solid;
+}
+
+
+// EXTRAS
+//--------------------------------------------------
+
+hr {
+    border: 0;
+    height: 1px;
+    margin-bottom: 1.6em;
+}
+
+
+// COLOR CLASSES
+//--------------------------------------------------
+
+.color-text {
+}
+
+.color-strong {
+}
+
+.color-weak {
+}
+
+.color-accent {
+}
+
+
+// ALIGNMENT
+//--------------------------------------------------
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+// ACCESSIBILITY
+//--------------------------------------------------
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+
+    &:focus {
+        border-radius: 2px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        clip: auto !important;
+        color: #ffffff;
+        display: block;
+        font-size: 0.875em;
+        font-weight: bold;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 12px 24px 12px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000; /* Above WP toolbar. */
+    }
+}
+
+// Text classes
+//--------------------------------------------------
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+// svg icon general
+//--------------------------------------------------
+.icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
+    position: relative;
+    top: -0.0625em;
+}
+
+// Modules
+//--------------------------------------------------
+
+.clear,
+.entry-content,
+.comment-content,
+.site-header,
+.site-content,
+.site-footer {
+    @include clearfix();
+}
+
+// Do not show the outline on the skip link target.
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}
+
+.full-width {
+    width: 100%;
+}
+.full-height {
+    height: 100%;
+}

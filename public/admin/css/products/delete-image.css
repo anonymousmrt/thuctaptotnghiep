@@ -1,0 +1,15 @@
+.imgHover {
+    display: inline;
+    position: relative;
+}
+
+.delete-image {
+    display: none;
+    position: absolute;
+	top: 0;
+	right: 6px;
+    z-index: 2;
+}
+.delete-image span{
+	color: red;
+}

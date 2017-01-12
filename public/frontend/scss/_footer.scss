@@ -1,0 +1,48 @@
+.sfooter {
+	background-color: #000;
+	color: rgba( 255, 255, 255, 0.4 );
+	padding-top: 64px;
+	padding-bottom: 64px;
+
+	.copyright {
+		font-size: 0.875em;
+	}
+}
+
+.fmenu-block {
+	margin-bottom: 0.75rem;
+}
+
+.fmenu {
+	list-style: none;
+	padding: 0;
+	margin: -5px -10px;
+	font-size: 0.75em;
+	
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		padding-left: 10px;
+		+ li {
+			&:before {
+				content: '|';
+				display: inline-block;
+				padding-right: 10px;
+			}
+		}
+	}
+
+	a {
+		color: inherit;
+
+		&:hover,
+		&:focus {
+			color: #fff;
+		}
+	}
+}

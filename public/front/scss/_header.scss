@@ -1,0 +1,236 @@
+.site-header {
+    @media( min-width: 1020px ) {
+        li.menu-toggle {
+            display: none;
+        }
+    }
+}
+.site-branding {
+    img,
+    .custom-logo-link {
+        display: block;
+    }
+
+    @media( min-width: 1020px ) {
+        height: 100%;
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            height: 100%;
+        }
+        .site-branding-inner {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+.site-title {
+    font-style: italic;
+    margin: 0;
+    font-size: 3rem;
+}
+
+.site-description {
+    font-style: italic;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.header-main-area {
+    overflow: hidden;
+}
+
+.header-main-area-inner {
+    position: relative;
+    min-height: 2rem;
+}
+
+.header-search-container {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 240ms ease-in;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.95;
+    }
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        z-index: 969;
+    }
+
+    &:after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        height: 100%;
+    }
+}
+
+.header-search {
+    width: 600px;
+    max-width: 90%;
+    display: inline-block;
+    vertical-align: middle;
+
+    .search-field {
+        height: 64px;
+        font-size: 18px;
+        padding-right: 60px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .search-submit {
+        font-size: 24px;
+    }
+}
+
+.header-main-layout-default {
+    text-align: center;
+
+    .social-menu-container {
+        
+    }
+}
+
+@media( min-width: 1020px ) {
+    .header-main-layout-default {
+        .site-branding {
+            display: inline-block;
+            max-width: 50%;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .social-menu-container,
+        .navtool-menu-container {
+            position: absolute;
+            top: 0;
+            height: 100%;
+        }
+        .social-menu-container {
+            left: 0;
+        }
+        .navtool-menu-container {
+            right: 0;
+        }
+    }
+}
+
+// Header main layout 2
+//--------------------------------------------------
+.header-main-layout-2 {
+    .header-main-area-inner {
+        display: table;
+        width: 100%;
+    }
+    .site-branding,
+    .social-menu-container,
+    .navtool-menu-container {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .social-menu-container,
+    .navtool-menu-container {
+        text-align: right;
+        white-space: nowrap;
+    }
+    .social-menu-container {
+        padding-right: 10px;
+    }
+}
+
+@media( max-width: 1019px ) {
+    .header-main-layout-2 {
+        .social-menu-container {
+            display: none;
+        }
+        .site-branding,
+        .navtool-menu-container {
+            width: 50%;
+        }
+    }
+}
+
+@media( min-width: 1020px ) {
+    .header-main-layout-2 {
+        .site-branding {
+            width: 100%;
+        }
+    }
+}
+
+// Header main layout 3
+//--------------------------------------------------
+.header-main-layout-3 {
+    text-align: center;
+}
+@media( min-width: 1020px ) {
+    .header-main-layout-3 {
+        .site-branding {
+            display: inline-block;
+            max-width: 50%;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .navtool-menu-container {
+            position: absolute;
+            top: 0;
+            height: 100%;
+        }
+        .navtool-menu-container-left {
+            left: 0;
+        }
+        .navtool-menu-container-right {
+            right: 0;
+        }
+    }
+}
+
+// Header main layout 4
+//--------------------------------------------------
+.header-main-layout-4 {
+    text-align: center;
+}
+
+// Header main area inline menu
+//--------------------------------------------------
+.header-main-layout-inline {
+    @media( min-width: 1020px ) {
+        .header-main-area-inner {
+            display: table;
+            width: 100%;
+        }
+        .site-branding,
+        .main-navigation {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .main-navigation {
+            text-align: right;
+        }
+        .top-menu-container,
+        .navtool-menu-container {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}

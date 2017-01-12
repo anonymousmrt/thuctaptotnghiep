@@ -1,0 +1,180 @@
+
+// General section
+//--------------------------------------------------
+.section {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+
+    .section-title {
+        margin-bottom: 2rem;
+    }
+}
+
+.read-more-block {
+    margin-top: 2rem;
+}
+
+
+// Seperator
+//--------------------------------------------------
+.fancy-sep {
+    position: relative;
+    max-width: 100%;
+    height: 7px;
+    overflow: hidden;
+    margin-bottom: 4em;
+
+    > span {
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-radius: 7px;
+        border: 1px solid #ccc;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        border-top: 1px solid $border_color;
+        position: absolute;
+        top: 3px;
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        right: 0;
+    }
+
+    &.ta-center {
+        width: 240px;
+        margin-left: auto;
+        margin-right: auto;
+        > span {
+            left: 50%;
+            margin-left: -3px;
+        }
+        &:before,
+        &:after {
+            width: 50%;
+        }
+        &:before {
+            margin-left: -3px;
+        }
+        &:after {
+            margin-right: -3px;
+        }
+    }
+
+    &.ta-left,
+    &.ta-right {
+        width: 120px;
+        &:before,
+        &:after {
+            width: 100%;
+        }
+    }
+
+    &.ta-left {
+        > span {
+            left: 0;
+        }
+        &:before {
+            display: none;
+        }
+        &:after {
+            margin-right: -7px;
+        }
+    }
+
+    &.ta-right {
+        > span {
+            right: 0;
+        }
+        &:before {
+            margin-left: -7px;
+        }
+        &:after {
+            display: none;
+        }
+    }
+}
+
+// Titles
+//--------------------------------------------------
+.entry-title {
+    a {
+        color: inherit;
+
+        &:hover,
+        &:focus {
+            color: $accent_color;
+        }
+    }
+}
+
+// Carousels
+//--------------------------------------------------
+.carousel {
+
+}
+
+.owl-nav,
+.owl-dots {
+    height: 1rem;
+    margin-top: 3rem;
+}
+
+.owl-nav:not(.disabled) + .owl-dots {
+    margin-top: -1rem;
+}
+
+.owl-dots {
+    font-size: 0;
+    text-align: center;
+}
+
+.owl-prev,
+.owl-next {
+    height: 1em;
+    line-height: 1;
+}
+
+.owl-prev {
+    float: left;
+}
+
+.owl-next {
+    float: right;
+}
+
+.owl-dot {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1;
+    width: 20px;
+    height: 1em;
+    position: relative;
+    span {
+        height: 2px;
+        display: block;
+        background-color: #ccc;
+        position: absolute;
+        top: 50%;
+        left: 2px;
+        right: 2px;
+        margin-top: -2px;
+        transition: all 300ms;
+    }
+    &:hover,
+    &.active {
+        span {
+            background-color: $accent_color;
+        }
+    }
+}

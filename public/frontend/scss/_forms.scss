@@ -1,0 +1,118 @@
+// The basic
+//--------------------------------------------------
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select {
+    max-width: 100%;
+    font-size: 0.875rem;
+}
+
+// Buttons
+//--------------------------------------------------
+
+.button {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 4rem;
+    padding: 0.844rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.25;
+    transition: border-color 300ms, color 300ms, background-color 300ms;
+}
+
+.button-outline,
+.button-accent-outline,
+.button-white-outline {
+    background-color: transparent;
+}
+
+.button-default,
+.button-accent,
+.button-white {
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+.button-default {
+    border-color: $strong_color;
+    background-color: $strong_color;
+    color: #fff;
+
+    &:hover {
+        color: $strong_color;
+    }
+}
+
+.button-accent {
+    border-color: $accent_color;
+    background-color: $accent_color;
+    color: #fff;
+
+    &:hover {
+        color: $accent_color;
+    }
+}
+
+.button-white {
+    border-color: #fff;
+    background-color: #fff;
+    color: $strong_color;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.button-outline {
+    border-color: $strong_color;
+    color: $strong_color;
+    &:hover {
+        background-color: $strong_color;
+        color: #fff;
+    }
+}
+
+.button-accent-outline {
+    border-color: $accent_color;
+    color: $accent_color;
+    &:hover {
+        background-color: $accent_color;
+        color: #fff;
+    }
+}
+
+.button-white-outline {
+    border-color: #fff;
+    color: #fff;
+    &:hover {
+        background-color: #fff;
+        color: $strong_color;
+    }
+}
+
+.button-small {
+    font-size: 0.75rem;
+    padding: 0.532rem 2rem;
+}
+
+.button-large {
+    font-size: 1rem;
+    padding: 1.25rem 4rem;
+}
